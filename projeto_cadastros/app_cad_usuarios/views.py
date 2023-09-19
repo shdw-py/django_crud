@@ -14,7 +14,7 @@ def usuarios(request):
     novo_usuario.idade = request.POST.get('idade')
     novo_usuario.save()
     
-    # exibir todos os usuarios ja cadastrados em uma nova pagina
+    # objeto para exibir todos os usuarios ja cadastrados em uma nova pagina, usage e.g.: usuarios.nome
     usuarios = {
         'usuarios': Usuario.objects.all()
     }
