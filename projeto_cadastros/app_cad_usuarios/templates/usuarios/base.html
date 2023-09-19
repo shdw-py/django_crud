@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>pagina home</title>
+    <title>base.html</title>
 </head>
 
 <body>
 
-    <nav class="bg-white py-4 border-gray-200 dark:bg-gray-900">
+    <nav class="bg-white p-4 border-gray-200 dark:bg-gray-900">
 
         <div class="hidden w-full md:block md:w-auto font-bold" id="navbar-default">
             <ul
@@ -18,17 +18,21 @@
                 <li>
                     <a href="{% url 'home' %}"
                         class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                        aria-current="page">Home</a>
+                        aria-current="page">home</a>
+                </li>
+                <li>
+                    <a href="{% url 'formulario' %}"
+                        class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                        aria-current="page">formulario</a>
                 </li>
             </ul>
     </nav>
 
-    <div class="flex flex-col justify-center items-center">
-        <h1 class="text-3xl font-bold underline mt-32">hello world!</h1>
+    <div class="flex flex-col justify-center items-center min-h-screen">
+        <!-- <h1 class="text-3xl font-bold underline mt-32">hello, from base template.</h1> -->
         
         <!-- *00000000000* -->
         {% block conteudo %}
-
         {% endblock %}
 
     </div>

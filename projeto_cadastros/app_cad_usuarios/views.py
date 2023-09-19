@@ -4,6 +4,9 @@ from .models import Usuario
 def home(request):
     return render(request, 'usuarios/home.html')
 
+def formulario(request):
+    return render(request, 'usuarios/formulario.html')
+
 def usuarios(request):
     # salvar os dados da tela para o db.
     novo_usuario = Usuario()
