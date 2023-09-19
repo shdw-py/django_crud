@@ -1,0 +1,10 @@
+<!-- *-* ... essas importacoes -->
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+        <form action="{% url 'listagem_usuarios' %}" method="post" class="flex flex-col gap-4 border-2 p-6 bg-gray-300 rounded-xl mt-5">
+            {% csrf_token %}
+            <label>Nome</label>     <input name="nome" class="py-5 px-10 bg-gray-100" type="text" placeholder="Digite o nome.">
+            <label>Idade</label>  <input name="idade" class="py-5 px-10 bg-gray-100" type="text" placeholder="Digite o produto.">
+            <button class="p-5 bg-green-600 font-semibold text-white">Enviar</button>
+        </form>
+{% endblock %}

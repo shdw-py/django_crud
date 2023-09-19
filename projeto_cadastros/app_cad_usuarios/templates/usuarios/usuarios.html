@@ -1,0 +1,19 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<div class="container">
+    <table class="border-3 rounded-2xl p-5 rounded-lg my-12 table-auto mx-auto text-center">
+        <tr>
+            <th class="px-4 py-2 text-lg border border-gray-400 rounded-lg">id</th>
+            <th class="px-4 py-2 text-lg border border-gray-400 rounded-lg">nome</th>
+            <th class="px-4 py-2 text-lg border border-gray-400 rounded-lg">idade</th>
+        </tr>
+        {% for user in usuarios %}
+        <tr>
+            <td class="border border-gray-400 px-2 py-2">{{user.id_usuario}}</td>
+            <td class="border border-gray-400 px-2 py-2">{{user.nome}}</td>
+            <td class="border border-gray-400 px-2 py-2">{{user.idade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
